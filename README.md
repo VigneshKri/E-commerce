@@ -1,1 +1,1 @@
-# E-commerce
+Landing page for a e-commerce enterprise
