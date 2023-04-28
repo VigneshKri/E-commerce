@@ -1,0 +1,520 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+body{
+font-family: 'Raleway', sans-serif;
+padding: 0;
+margin: 0;
+}
+nav{
+    background-color: black;
+    color: white;
+    padding: 20px 50px;
+}
+.abc
+{
+    cursor: pointer;
+}
+
+.navTop
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchBar
+{
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.searchInput
+{
+    border: none;
+    background-color: transparent;
+}
+
+.searchInput::placeholder
+{
+    color: lightgray;
+}
+
+.limitedOffer
+{
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+     
+}
+
+.navBottom
+{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.menuItem
+{
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+   font-weight: lighter;
+    font-size: 400;
+}
+
+/*slider background setup*/
+.slider
+{
+background: url("https://static.vecteezy.com/system/resources/previews/007/115/713/original/the-old-vintage-black-brick-wall-background-with-lighting-decoration-and-dark-tone-style-for-background-design-concept-free-photo.jpg");
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+overflow-x: hidden;
+overflow-y: hidden;
+}
+.sliderWrapper
+{
+    display: flex;
+    width:500vw;
+    /* animations*/
+    transition: all 1s ease-in-out;
+   
+
+}
+.sliderItem
+{
+    /* for every click 100vw size is moved*/
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.sliderBg
+{
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    position:absolute;
+    background-color: beige;
+}
+.imgSlider
+{
+    z-index: 1;
+    
+}
+
+/*positioning*/
+.sliderTitle
+{
+    position:relative;
+    top:0;
+    right:0.5%;
+    color: rgb(115, 100, 73);
+    font-size: 75px;
+    font-weight: bolder;
+    text-align: center;
+    z-index: 1;
+
+
+}
+
+.sliderPrice
+{
+    position: relative;
+    bottom:40%;
+    right:66%;
+    color: rgb(115, 100, 73);
+    font-weight: 500 bolder;
+    font-size: 50px;
+    border: 1px solid gray;
+    z-index: 1;
+}
+
+.BuyButton
+{
+    position: relative;
+    top:10%;
+    right:2%;
+    color: rgb(115, 100, 73);
+    font-weight: 500 bolder;
+    font-size: 50px;
+    z-index: 1;
+    cursor: pointer;
+    background-color: transparent;
+}
+.BuyButton:hover{
+    background-color: wheat;
+    color: black;
+}
+
+.sliderItem:nth-child(1) .sliderBg
+{
+    background-color:greenyellow;
+}
+
+.sliderItem:nth-child(2) .sliderBg
+{
+    background-color:purple;
+}
+.sliderItem:nth-child(3) .sliderBg
+{
+    background-color:teal;
+}
+.sliderItem:nth-child(4) .sliderBg
+{
+    background-color:burlywood;
+}
+.sliderItem:nth-child(5) .sliderBg
+{
+    background-color:aquamarine;
+}
+
+
+.sliderItem:nth-child(1) .sliderPrice
+{
+    background-color:greenyellow;
+}
+
+.sliderItem:nth-child(2) .sliderPrice
+{
+    background-color:rgb(146, 115, 146);
+}
+.sliderItem:nth-child(3) .sliderPrice
+{
+    background-color:rgb(147, 179, 179);
+}
+.sliderItem:nth-child(4) .sliderPrice
+{
+    background-color:rgb(164, 147, 126);
+}
+.sliderItem:nth-child(5) .sliderPrice
+{
+    background-color:rgb(143, 183, 170);
+}
+
+
+.features
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+.featureImg{
+    width: 50px;
+    height: 50px;
+
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featureTitle
+{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.featuredDesc
+{
+    color: grey;
+    width: 50%;
+    height: 100px;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+.product
+{
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+.payment
+{
+    width: 650px;
+    height: 650px;
+    background-color:white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 18px 11px 26px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 18px 11px 26px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 18px 11px 26px 0px rgba(0,0,0,0.75);
+}
+.paytitle
+{
+    font-size: 40px;
+    color: black;
+
+}
+label{
+    font-size: 14px;
+    font-weight: 300;
+}
+.payInput
+{
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid black;
+
+}
+.payInput ::placeholder
+{
+    color: lightblue;
+
+}
+.cardicons
+{
+    display: flex;
+}
+.cardicon{
+    margin-right: 10px;
+}
+.cardinfo
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm
+{
+    width: 30%;
+}
+
+.payButton
+{
+    position: absolute;
+    height: 40px;
+    bottom: -40px;
+    width: 100%;
+    left: 0;
+    box-shadow: 18px 11px 26px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 18px 11px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 11px 26px 0px rgba(0,0,0,0.75);
+    
+    background-color: green;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+.close
+{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+.productImg
+{
+    width: 50%;
+}
+
+.productdetails
+{
+    position: absolute;
+    top:10%;
+    right: 0%;
+    width: 40%;
+    padding: 50px;
+}
+.producttitle
+{
+    font-size: 75px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.productdesc
+{
+    font-size: 30px;
+    color: gray;
+}
+.colors,.sizes
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+.color
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.color:last-child
+{
+    background-color: darkblue;
+}
+.size{
+padding: 5px 20px;
+border: 1px solid black;
+margin-right: 10px;
+cursor: pointer;
+font-size: 20px;
+}
+.productButton
+{
+    float: right;
+    padding: 10px 20px;
+    background-color: transparent;
+    color:black;
+    cursor: pointer;
+    font-weight: 600;
+    
+}
+.productButton:hover
+{
+    background-color: black;
+    color:wheat;
+}
+.productprice
+{
+    font-size: 30px;
+}
+.gallery
+{
+    padding: 50px;
+    display: flex;
+}
+
+.galleryitem
+{
+    flex:1;
+    padding: 50px;
+
+}
+.galleryimg
+{
+    width: 100%;
+}
+.gallerytitle
+{
+    text-align: center;
+}
+.newseason
+{
+    display: flex;
+}
+.nsitem
+{
+    flex:1;
+    background-color: black;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.nsimg
+{
+    width: 120%;
+    height: 500px;
+}
+.nstitle
+{
+    font-size: 50px;
+}
+.nsbutton
+{
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    width: 200px;
+    height: 70px;
+}
+footer
+{
+    display: flex;
+}
+.footerleft
+{
+    flex:2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.fmenutitle
+{
+    font-size: 16px;
+        font-size: 40px;
+
+}
+.fmenulist
+{
+    padding: 0;
+    list-style: none;
+}
+.fListitem
+{
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+     font-size: 20px;
+
+}
+.footerright{
+flex:1;
+padding: 50px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.finput
+{
+    padding: 5px;
+    width: 50%;
+    height: 35px;
+}
+.fbutton
+{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.ficons
+{
+    display: flex;
+}
+.ficon{
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+}
+.copyright
+{
+    font-weight: 300;
+    font-size: 25px;
+}
+
